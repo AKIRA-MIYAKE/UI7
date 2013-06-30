@@ -1,0 +1,77 @@
+/* =============================================================
+    Tab Bar styling.
+ * ============================================================= */
+
+.tabbar {
+	display: block;
+	position: relative;
+	width: 100%;
+	right: 0;
+	left: 0;
+	z-index: 10;
+	
+	.tabbar-inner {
+		display: block;
+		position:relative;
+		background: scale-color($white, $alpha: -5%);
+		color: $black;
+		border: 1px solid $light-gray;
+		width: 100%;
+		height: 48px;
+		overflow: visible;
+		text-align: center;
+		
+		.container {
+			display: block;
+			position: relative;
+		
+			.tabs {
+				display: inline-block;
+				position: relative;
+				padding: 0;
+				margin: 0;
+				
+				.tab {
+					display: inline-block;
+					position: relative;
+					color: $gray;
+					float: left;
+					margin: 2px 15px 0 15px;
+					text-align: center;
+					
+					&:hover{
+						color: $secondary;
+						
+						a {
+							color: $secondary;
+						}
+					}
+					
+					&.active {
+						color: $primary;
+						
+						a {
+							color: $primary;
+						}
+					}
+										
+					a {
+						color: $gray;
+						font-size: 28px;
+						line-height: 33px;
+						text-decoration: none;
+						padding-left: 10px;
+						margin: 0;
+					}
+					
+					.label > p {
+						padding: 0;
+						margin: -5px 0 0 0;
+						font-size: 10px;
+						line-height: 12px;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,47 @@
+/* =============================================================
+    Scope Bar styling.
+ * ============================================================= */
+
+.scopebar {
+	display: block;
+	position: relative;
+	min-width: 280px;
+	
+	> .scope-btn {
+		display: inline-block;
+		background: $white;
+		position: relative;
+		width: 140px;
+		font-size: 15px;
+		line-height: $line-height *  1.2;
+		font-weight: $font-weight;
+		text-align: center;
+		text-decoration: none;
+		border: 1px solid $primary;
+		padding: 0 0;
+		margin-right: -6px;
+		box-sizing: border-box;
+		
+		&:first-child {
+			border-radius: 4px 0 0 4px;
+		}
+		
+		&:last-child {
+			border-radius: 0 4px 4px 0;
+		}
+		
+		&:hover {
+			border: 1px solid $secondary;
+		}
+		
+		&.active {
+			background: $primary;
+			color: $white;
+			
+			&:hover,
+			&:active {
+				background: $secondary;
+			}
+		}
+	}
+}

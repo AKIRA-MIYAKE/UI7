@@ -1,0 +1,107 @@
+/* ============================================================= */
+/* =============================================================
+    RESPONSIVE RESET
+    Replace with your own.
+ * ============================================================= */
+@-webkit-viewport {
+  width: device-width;
+  zoom: 1.0; }
+
+@-moz-viewport {
+  width: device-width;
+  zoom: 1.0; }
+
+@-ms-viewport {
+  width: device-width;
+  zoom: 1.0; }
+
+@-o-viewport {
+  width: device-width;
+  zoom: 1.0; }
+
+@viewport {
+  width: device-width;
+  zoom: 1.0; }
+
+/* line 50, ../scss/hero.scss */
+html {
+  overflow-y: auto; }
+
+/* line 52, ../scss/hero.scss */
+img, audio, video, canvas {
+  max-width: 100%; }
+
+/*  Sets Body Width */
+/* line 56, ../scss/hero.scss */
+.container,
+hgroup,
+.sass-hero-demo {
+  max-width: 40em;
+  width: 88%;
+  margin-left: auto;
+  margin-right: auto; }
+
+/* =============================================================
+    HERO
+    Callout and background color styling.
+ * ============================================================= */
+/* line 73, ../scss/hero.scss */
+.bg,
+.sass-bg-demo > div:nth-of-type(1),
+.sass-bg-demo > div:nth-of-type(2),
+.sass-bg-demo > div:nth-of-type(3),
+.sass-bg-demo > div:nth-of-type(4) {
+  background-color: #f4f4f4;
+  padding-top: 1.52941em;
+  padding-bottom: 1.52941em; }
+
+/* line 80, ../scss/hero.scss */
+.bg-blue,
+.sass-bg-demo > div:nth-of-type(2),
+.sass-bg-demo > div:nth-of-type(4) {
+  color: white;
+  background-color: #0088cc; }
+
+/* line 86, ../scss/hero.scss */
+.bg-condensed,
+.sass-bg-demo > div:nth-of-type(3),
+.sass-bg-demo > div:nth-of-type(4) {
+  padding-top: 0.82353em;
+  padding-bottom: 0.82353em; }
+
+/* line 92, ../scss/hero.scss */
+.hero,
+.sass-hero-demo article > div:nth-child(1),
+.sass-hero-demo article > div:nth-child(2) {
+  background-color: #f4f4f4;
+  margin-bottom: 1.52941em;
+  padding: 1.52941em;
+  border: 0.07143em solid #e5e5e5;
+  border-radius: 0.23529em; }
+
+/* line 101, ../scss/hero.scss */
+.hero-condensed,
+.sass-hero-demo article > div:nth-child(2) {
+  padding: 0.82353em; }
+
+/* line 111, ../scss/hero.scss */
+hgroup {
+  text-align: center;
+  margin-bottom: 3em; }
+  /* line 115, ../scss/hero.scss */
+  hgroup h1 {
+    font-size: 3em; }
+  /* line 118, ../scss/hero.scss */
+  hgroup p {
+    font-size: 1.2em; }
+
+/* line 123, ../scss/hero.scss */
+.sass-hero-demo {
+  text-align: center; }
+  /* line 135, ../scss/hero.scss */
+  .sass-hero-demo h2 {
+    text-align: left; }
+
+/* line 140, ../scss/hero.scss */
+.sass-bg-demo {
+  text-align: center; }

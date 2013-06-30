@@ -1,0 +1,27 @@
+.searchbar {
+	display: block;
+	position: relative;
+	
+	.searchbar-inner {
+		display: block;
+		position: relative;
+		background: scale-color($light-gray, $lightness: 50%);
+		
+		.search-icon {
+			display: inline-block;
+			position: absolute;
+			background: transparent;
+			color: $gray;
+			top: 13px;
+			margin-left: 12px;
+		}
+		
+		input[type="search"] {
+			-webkit-appearance: none;
+			padding: 5px 0 5px 25px;
+			margin: 10px 0 10px 0;
+			border: 1px solid $light-gray;
+			border-radius: 4px;
+		}
+	}
+}

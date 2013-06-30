@@ -1,0 +1,59 @@
+.list {
+	display: block;
+	position: relative;
+	
+	.list-inner {
+		display: block;
+		position: relative;
+		background: scale-color($light-gray, $lightness: 50%);
+		padding: 10px 0;
+		
+		ul {
+			display: block;
+			position: relative;
+			background: $white;
+			border: 1px solid $light-gray;
+			max-width: 40em;
+			padding: 0;
+			margin: 0 auto 0 auto;
+			list-style: none;
+			box-sizing: border-box;
+			
+			li {
+				display: block;
+				position: relative;
+				background: inherit;
+				color: $black;
+				
+				&:first-child > a {
+					border: none;
+				}
+				
+				&:hover,
+				&:active {
+					background: scale-color($light-gray, $lightness: 50%);
+				}
+				
+				a {
+					display: block;
+					position: relative;
+					background: inherit;
+					color: $black;
+					padding: 6px 0;
+					margin-left: 20px;
+					line-height: $line-height;
+					text-decoration: none;
+					border-top: 1px solid $light-gray;
+					box-sizing: border-box;
+					
+					span {
+						display: block;
+						position: relative;
+						float: right;
+						padding-right: 10px;
+					}
+				}
+			}
+		}
+	}
+}
