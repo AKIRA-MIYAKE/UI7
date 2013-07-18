@@ -1,11 +1,7 @@
 UI7
 ===
 
-UI7 is iOS7 like css component.  
+UI7 is a front-end framework to create iOS7 like UI.  
 
-This component based kraken and used LigatureSymbols.  
-Very Thanks.  
-
-1. [Kraken](http://cferdinandi.github.io/kraken/)  
-
-2. [LigatureSymbols](http://kudakurage.com/ligature_symbols/)
+This framework containing some components of UI elements, and responsive 6-column grids.  
+This components based Kraken. In addition, using Free iOS 7 icons in vector, Pop Easy, and to reference A COLLECTION OF PAGE TRANSITIONS.   
