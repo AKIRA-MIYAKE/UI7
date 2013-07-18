@@ -1,0 +1,16 @@
+@charset "UTF-8";
+/* =============================================================
+    APP START VIEW styling.
+ * ============================================================= */
+
+#start {
+  background: $background-color;
+  text-align: center;
+  
+  .app-name {
+    display: block;
+    position: relative;
+    min-width: 100px;
+    margin: 100px auto 0 auto;
+  }
+}

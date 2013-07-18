@@ -1,0 +1,37 @@
+// ----------------------------------------
+// // ------ Config for UI7 ------
+// ----------------------------------------
+
+// ----------------------------------------
+// // ------ font-setting ------
+// ----------------------------------------
+
+$font-size: 17px;
+$line-height: 23px;
+$font-weight: 300;
+$font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial,
+  'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', "Lucida Grande", sans-serif;
+
+// ----------------------------------------
+// // ------ colors ------
+// ----------------------------------------
+
+$blue: #0088cc;
+$dark-blue: #005580;
+$red: #ff706e;
+$dark-red: #c74440;
+
+$black: #333;
+$dark-gray: #666;
+$gray: #aaa;
+$light-gray: #e5e5e5;
+$white: #fff;
+
+$primary: $blue;
+$secondary: $dark-blue;
+$danger: $red;
+$muted: $gray;
+
+//Common Colors
+$background-color: scale-color($light-gray, $lightness: 50%);
+$border-color: $light-gray;

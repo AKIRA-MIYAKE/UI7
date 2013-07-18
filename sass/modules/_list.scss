@@ -1,0 +1,124 @@
+@charset "UTF-8";
+/* =============================================================
+    LIST styling.
+ * ============================================================= */
+
+.list {
+  display: block;
+  position: relative;
+  
+  .list-inner {
+    display: block;
+    position: relative;
+    background: $white;
+    max-width: 40em;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  
+    ul {
+      display: block;
+      position: relative;
+      background: $white;
+      width: 100%;
+      margin: 0;
+      list-style: none;
+      border: 1px solid $border-color;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      
+      li {
+        display: block;
+        position: relative;
+        background: transparent;
+        color: $black;
+        width: 100%;
+              
+        .item {
+          display: block;
+          position: relative;
+          background: transparent;
+          color: $black;
+          padding: 7px 0 5px;
+          margin-left: 6%;
+          line-height: $line-height;
+          border-top: 1px solid $border-color;
+          box-sizing: border-box;
+          
+          a {
+            color: $black;
+            text-decoration: none;
+            
+            &:after {
+              font-family: 'ios7-icon';
+              content: '\f177';
+              display: inline-block;
+              position: absolute;
+              right: 10px;
+            }
+          }
+        }
+        &:first-child .item {
+          border: none;
+        }
+        &:hover, &:active, &.active {
+          background: $light-gray;
+        }
+      }
+    }
+  }
+  
+  &.list-definition {
+    .list-inner {
+      display: block;
+      position: relative;
+      background: $white;
+      max-width: 40em;
+      width: 100%;
+      margin-right: auto;
+      margin-left: auto;
+    
+      dl {
+        display: block;
+        position: relative;
+        background: $white;
+        width: 100%;
+        margin: 0;
+        list-style: none;
+        border: 1px solid $border-color;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        
+        dt {
+          display: block;
+          position: relative;
+          background: transparent;
+          color: $black;
+          padding: 7px 0 5px;
+          margin-left: 6%;
+          line-height: $line-height;
+          border-top: 1px solid $border-color;
+          box-sizing: border-box;
+          
+          &:first-child {
+            border-top: none;
+          }
+        }
+        
+        dd {
+          display: block;
+          position:relative;
+          float: right;
+          background: transparent;
+          color: $black;
+          padding: 7px 0 5px;
+          margin-right: 6%;
+          line-height: $line-height;
+          top: - (12px + $line-height);
+        }
+      }
+    }
+  }
+}

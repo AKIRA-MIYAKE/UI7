@@ -1,0 +1,32 @@
+@charset "UTF-8";
+/* =============================================================
+    FORM styling.
+ * ============================================================= */
+
+input, textarea, select {
+  background: $white;
+  border-color: scale-color($gray, $lightness: 50%);
+  border-radius: 5px;
+  padding: 6px 10px 4px;
+  font-size: $font-size;
+  line-height: $line-height;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  
+  &:focus {
+    border-color: $primary;
+    box-shadow: none;
+  }
+}
+
+.checkbox-set {
+  margin-bottom: 18px;
+  padding: 6px 0 4px;
+  
+  .icheckbox_square-blue {
+    display: inline-block;
+    float: left;
+    margin-right: 15px;
+  }
+}
+

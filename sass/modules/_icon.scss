@@ -1,0 +1,26 @@
+@charset 'UTF-8';
+
+@font-face {
+  font-family: 'ios7-icon';
+  src:
+    url('../fonts/ios7-icon.woff') format('woff'),
+    url('../fonts/ios7-icon.svg') format('svg'),
+    url('../fonts/ios7-icon.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon {
+  font-family: 'ios7-icon';
+  -webkit-text-rendering: optimizeLegibility;
+  -moz-text-rendering: optimizeLegibility;
+  -ms-text-rendering: optimizeLegibility;
+  -o-text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  margin: 0 5px;
+}

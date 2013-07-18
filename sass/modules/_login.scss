@@ -1,0 +1,53 @@
+@charset "UTF-8";
+/* =============================================================
+    LOGIN VIEW styling.
+ * ============================================================= */
+
+.app-name {
+  display: block;
+  position: relative;
+  min-width: 100px;
+  margin: 100px auto 0 auto;
+  text-align: center;
+}
+  
+.login-form {
+  display: block;
+  position: relative;
+  max-width: 40em;
+  width: 88%;
+  margin: 0 auto 0;
+  padding: 0;
+  
+  label {
+    display: none;
+  }
+  
+  .textbox-group {
+    input {
+      display: block;
+      position: relative;
+      margin-top: 0;
+      margin-bottom: -1px;
+      border-radius: 0;
+      padding: 16px 10px 14px 10px;
+      
+      &:first-of-type {
+        border-radius: 5px 5px 0 0;
+      }
+      &:last-of-type {
+        margin-bottom: 30px;
+        border-radius: 0 0 5px 5px;
+      }
+      
+      &:focus {
+        z-index: 10;
+      }
+    }
+  }
+  
+  .btn-login {
+    font-size: $font-size;
+    padding: 11px 10px 9px 10px;
+  }
+}

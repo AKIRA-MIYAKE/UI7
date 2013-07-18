@@ -1,0 +1,35 @@
+@charset "UTF-8";
+/* =============================================================
+    TYPOGRAPHY styling.
+ * ============================================================= */
+
+body {
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+    color: $black;
+}
+
+a {
+  color: $primary;
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  
+  &:hover {
+    color: $secondary;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $font-weight;
+}
+
+strong {
+  font-weight: 400;
+}
+
+hr {
+  border-top-color: $light-gray;
+  border-bottom-color: scale-color($light-gray, $lightness: 25%);
+}

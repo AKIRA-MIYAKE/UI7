@@ -1,1 +1,508 @@
-<!DOCTYPE html><html lang="ja"><head>    <meta charset="utf-8">    <title>UI7 - iOS7 like css component</title>    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <!-- stylesheets -->    <link rel="stylesheet" href="css/kraken.css" type="text/css" />    <link rel="stylesheet" href="scss/ui7.css" type="text/css">        <style>	    body {		    padding-top: 44px;		    margin-bottom: 50px;		    box-sizing: border-box;	    }	    .scopebar {		    width: 200px;		    margin-right: auto;		    margin-left: auto;	    }	    p.head {		    margin-bottom: 0;	    }    </style>    <!-- HTML5 Shim for IE -->    <!--[if IE]>        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>    <![endif]--></head><body>	<!-- Navbar -->	<nav class="navbar">		<div class="navbar-inner">			<div class="container">				<span class="logo">UI7</span>				<ul class="nav">					<li class="nav-left"><a href="#"><span class="lsf-icon" title="left"></span>Back</a></li>					<li class="nav-right"><a href="#">Edit</a></li>				</ul>			</div>		</div>	</nav>			<!-- Description -->	<div class="container">		<h1>Description</h1>		<p>UI7 is a CSS component to create iOS7 like UI.</p>	</div>			<!-- Search Bar -->	<div class="container">		<p class="head">Search Bar</p>	</div>		<div class="searchbar space-bottom">		<div class="searchbar-inner">			<div class="container">				<span class="lsf-icon search-icon" title="search"></span>				<input type="search" />			</div>		</div>	</div>		<!-- List -->	<div class="container">		<p class="head">List</p>	</div>				<div class="list space-bottom">		<div class="list-inner">			<ul>				<li><a href="#">List1<span class="lsf-icon icno-right" title="right"></span></a></li>				<li><a href="#">List2<span class="lsf-icon icon-right" title="right"></span></a></li>				<li><a href="#">List3<span class="lsf-icon icon-right" title="right"></span></a></li>			</ul>		</div>	</div>								<!-- Tool Bar -->	<div class="container">		<p class="head">Tool Bar</p>	</div>		<div class="toolbar space-bottom">		<div class="toolbar-inner">			<div class="container">				<ul class="tool">					<li><a href="#" class="lsf-icon" title="file"></a></li>					<li><a href="#" class="lsf-icon" title="time"></a></li>					<li><a href="#" class="lsf-icon" title="help"></a></li>					<li><a href="#" class="lsf-icon" title="delete"></a></li>					<li><a href="#" class="lsf-icon" title="setting"></a></li>				</ul>			</div>		</div>	</div>			<!-- Scope Bar -->	<div class="container">		<p class="head">Scope Bar</p>	</div>							<div class="container">		<div class="scopebar space-bottom">			<a href="#" class="scope-btn active">Scope1</a>			<a href="#" class="scope-btn">Scope2</a>		</div>	</div>			<!-- Tab Bar -->	<div class="container">		<p class="head">Tab Bar</p>	</div>		<div class="tabbar space-bottom">		<div class="tabbar-inner">			<div class="container">				<div class="tabs">					<div class="tab active">						<a href="#" class="lsf-icon" title="camera"></a>						<span class="label"><p>Camera</p></span>					</div>												<div class="tab">						<a href="#" class="lsf-icon" title="video"></a>						<span class="label"><p>Video</p></span>					</div>												<div class="tab">						<a href="#" class="lsf-icon" title="playmedia"></a>						<span class="label"><p>Play</p></span>					</div>				</div>			</div>		</div>	</div>			<!-- Form -->	<div class="container">		<p class="head">Form</p>	</div>					<div class="container">		<form>			<div class="row">				<div class="grid-2">					<label for="name">Name</label>				</div>				<div class="grid-4">					<input type="text" id="name" />				</div>			</div>						<div class="row">				<div class="grid-2">					<label for="message">Message</label>				</div>				<div class="grid-4">					<textarea name="message" id="message" cols="30" rows="10"></textarea>				</div>			</div>						<div class="row">				<div class="grid-4 offset-2">					<button class="btn btn-blue">Submit</button>				</div>			</div>		</form>	</div>			</body></html>
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="format-detection" content="telephone=no"  />
+  
+  <title>UI7 - iOS7 like front-end framework</title>
+  
+  <!-- Stylesheets Loading -->
+  <link rel="stylesheet" href="stylesheets/kraken.css" />
+  <link rel="stylesheet" href="stylesheets/dropkick.css" />
+  <link rel="stylesheet" href="stylesheets/animations.css" />
+  <link rel="stylesheet" href="sass/ui7.css" />
+  <style>
+    .content {
+      padding: 50px 0;
+    }
+    .description p {
+      margin-bottom: 5px;
+    }
+    #bars {
+      background: #fff;
+    }
+    .toolbar {
+      position: relative;
+    }
+    .scopebar {
+      margin-right: auto;
+      margin-left: auto;
+    }
+    .tabbar {
+      position: relative;
+    }
+  </style>
+  
+  <!-- HTML5 Shim for IE -->
+  <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  
+</head>
+<body>
+
+  <div class="app-view"><!-- Wrapper of Pages -->
+    
+    <div class="page" id="start">
+      <div class="page-inner">
+        
+        <div class="app-name">
+          <h1>UI7</h1>
+          <p>iOS7 like css Components</p>
+          <img src="images/loader.gif" alt="Loading..." />
+        </div>
+        
+      </div>
+    </div><!-- ./Start Page -->
+    
+    
+    <div class="page" id="login">
+      <div class="page-inner">
+        
+        <div class="app-name">
+          <h1>UI7</h1>
+        </div>
+        
+        <div class="content">
+          <div class="content-inner">
+            
+            <div class="container">
+              
+              <div class="login-form">
+                <div class="textbox-group">
+                  <label for="account">Account</label>
+                  <input type="text" id="account" placeholder="Account"/>
+                  <label for="password">Password</label>
+                  <input type="text" id="password" placeholder="Password" />
+                </div>
+                
+              </div>
+              
+            </div>
+            
+          </div>
+        </div><!-- ./Content -->
+        
+      </div>
+    </div><!-- ./Login Page -->
+    
+    
+    <div class="page" id="main">
+      <div class="page-inner">
+        
+        <nav class="navbar">
+          <div class="navbar-inner">
+            <div class="container">
+              <span class="logo">UI7</span>
+            </div>
+          </div>
+        </nav><!-- ./Navbar -->
+        
+        <div class="content">
+          <div class="content-inner">
+              
+            <section class="description">
+              <div class="container">
+                <h3 class="section-header">Description</h3>
+                <p>UI7 is a front-end framework to create iOS7 like UI.</p>
+                <p>This framework containing some components of UI elements, and responsive 6-column grids.</p>
+                <p>This components based <a href="http://cferdinandi.github.io/kraken/">Kraken</a>. In addition, using <a href="http://icons8.com/free-ios-7-icons-in-vector/">Free iOS 7 icons in vector</a>, <a href="http://thomasgrauer.com/popeasy/">Pop Easy</a>, and to reference <a href="http://tympanus.net/codrops/2013/05/07/a-collection-of-page-transitions/">A COLLECTION OF PAGE TRANSITIONS</a>.</p>
+              </div>
+            </section><!-- ./Description -->
+              
+            <section class="catalogue">
+              <div class="container">
+                <h3 class="section-header">Catalogue</h3>
+              </div>
+              
+              <div class="list">
+                <div class="list-inner">
+                  <ul>
+                    <li><span class="item"><a href="#">Bars</a></span></li>
+                    <li><span class="item"><a href="#">Lists</a></span></li>
+                    <li><span class="item"><a href="#">Typography</a></span></li>
+                    <li><span class="item"><a href="#">Forms</a></span></li>
+                    <li><span class="item"><a href="#">Temporary Views</a></span></li>
+                  </ul>
+                </div>
+              </div>
+                                          
+            </section><!-- ./Catalogue -->
+                        
+          </div>
+        </div><!-- ./Content -->
+        
+      </div>
+    </div><!-- Main Page -->
+    
+    
+    <div class="page" id="bars">
+      <div class="page-inner">
+        
+        <nav class="navbar">
+          <div class="navbar-inner">
+            <div class="container">
+              <span class="logo">Bars</span>
+              <ul class="nav">
+                <li class="nav-left"><a href="#"><span class="icon">&#61903</span>Back</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav><!-- ./Navbar -->
+        
+        <div class="content">
+          <div class="content-inner">
+          
+            <section>
+              <div class="container">
+                <h3 class="section-header">Search Bar</h3>
+              </div>
+              
+              <div class="searchbar">
+                <div class="searchbar-inner">
+                  <div class="container">
+                    <input type="search" class="with-icon" />
+                  </div>
+                </div>
+              </div><!-- ./Search Bar -->
+            </section>
+            
+            <section>
+              <div class="container">
+                <h3 class="section-header">Tool Bar</h3>
+              </div>
+              
+              <div class="toolbar">
+                <div class="toolbar-inner">
+                  <div class="container">
+                    <ul class="tool">
+                      <li><a href="#"><span class="icon">&#61720</span></a></li>
+                      <li><a href="#"><span class="icon">&#61723</span></a></li>
+                      <li><a href="#"><span class="icon">&#61752</span></a></li>
+                      <li><a href="#"><span class="icon">&#61854</span></a></li>
+                      <li><a href="#"><span class="icon">&#61918</span></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div><!-- ./Tool Bar -->
+            </section>
+            
+            <section>
+              <div class="container">
+                <h3 class="section-header">Scope Bar</h3>
+              </div>
+              
+              <div class="container">
+                <div class="scopebar">
+                  <a href="#" class="scope-btn active">Scope1</a>
+                  <a href="#" class="scope-btn">Scope2</a>
+                </div>
+              </div><!-- Scope Bar -->
+            </section>
+            
+            <section>
+              <div class="container">
+                <h3 class="section-header">Tab Bar</h3>
+              </div>
+              
+              <div class="tabbar">
+                <div class="tabbar-inner">
+                  <div class="container">
+                    <div class="tabs">
+                      
+                      <div class="tab active">
+                        <a href="#">
+                          <span class="icon">&#61765</span>
+                          <p>Camera</p>
+                        </a>
+                      </div>
+                      
+                      <div class="tab">
+                        <a href="#">
+                          <span class="icon">&#61856</span>
+                          <p>Video</p>
+                        </a>
+                      </div>
+                      
+                      <div class="tab">
+                        <a href="#">
+                          <span class="icon">&#61931</span>
+                          <p>Play</p>
+                        </a>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div><!-- ./Tab Bar -->
+            </section>
+
+          </div>
+        </div><!-- ./Content -->
+                
+      </div>
+    </div><!-- Bars Page -->
+    
+    
+    <div class="page" id="lists">
+      <div class="page-inner">
+        
+        <nav class="navbar">
+          <div class="navbar-inner">
+            <div class="container">
+              <span class="logo">Lists</span>
+              <ul class="nav">
+                <li class="nav-left"><a href="#"><span class="icon">&#61903</span>Back</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav><!-- ./Navbar -->
+        
+        <div class="content">
+          <div class="content-inner">
+            
+            <section>
+              <div class="container">
+                <h3 class="section-header">List</h3>
+              </div>
+              
+              <div class="list">
+                <div class="list-inner">
+                  <ul>
+                    <li><span class="item"><a href="#">Item1</a></span></li>
+                    <li><span class="item"><a href="#">Itme2</a></span></li>
+                    <li><span class="item"><a href="#">Item3</a></span></li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+            
+            <section>
+              <div class="container">
+                <h3 class="section-header">Definition List</h3>
+              </div>
+              
+              <div class="list list-definition">
+                <div class="list-inner">
+                  <dl>
+                    <dt>Term1</dt>
+                      <dd>Description1</dd>
+                    <dt>Term2</dt>
+                      <dd>Description2</dd>
+                    <dt>Term3</dt>
+                      <dd>Description3</dd>
+                  </dl>
+                </div>
+              </div>
+            </section>
+            
+          </div>
+        </div><!-- ./Content -->
+        
+      </div>
+    </div><!-- ./Lists Page -->
+    
+    
+    <div class="page" id="typography">
+      <div class="page-inner">
+        
+        <nav class="navbar">
+          <div class="navbar-inner">
+            <div class="container">
+              <span class="logo">Typography</span>
+              <ul class="nav">
+                <li class="nav-left"><a href="#"><span class="icon">&#61903</span>Back</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav><!-- ./Navbar -->
+        
+        <div class="content">
+          <div class="content-inner">
+            
+            <section>
+              <div class="container">
+                <h3 class="section-header">Texts</h3>
+                
+                Normal Text<br />
+                <span class="text-muted">Muted Text</span><br />
+                <span class="text-small">Small Text</span><br />
+                <span class="text-tall">Tall Text</span><br />
+                <a href="#">Hyperlinks</a><br />
+                <strong>Bold</strong> and <em>italics</em>.           
+              </div>
+            </section>
+            
+            <section>
+              <div class="container">
+                <h3 class="section-header">Headings</h3>
+                
+                <h1>h1.Heading1</h1>
+                <h2>h2.Heading2</h2>
+                <h3>h3.Heading3</h3>
+                <h4>h4.Heading4</h4>
+                <h5>h5.Heading5</h5>
+                <h6>h6.Heading6</h6>
+              </div>
+            </section>
+            
+          </div>
+        </div><!-- ./Content -->
+        
+      </div>
+    </div><!-- ./Typography Page -->
+    
+    
+    <div class="page" id="forms">
+      <div class="page-inner">
+        
+        <nav class="navbar">
+          <div class="navbar-inner">
+            <div class="container">
+              <span class="logo">Forms</span>
+              <ul class="nav">
+                <li class="nav-left"><a href="#"><span class="icon">&#61903</span>Back</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav><!-- ./Navbar -->
+        
+        <div class="content">
+          <div class="content-inner">
+            
+            <div class="container">
+              <form>
+          			<div class="row">
+          				<div class="grid-2">
+          					<label for="name">Name</label>
+          				</div>
+          				<div class="grid-4">
+          					<input type="text" id="name" />
+          				</div>
+          			</div>
+          			
+          			<div class="row">
+          				<div class="grid-2">
+          					<label for="message">Message</label>
+          				</div>
+          				<div class="grid-4">
+          					<textarea name="message" id="message" cols="30" rows="10"></textarea>
+          				</div>
+          			</div>
+          			
+          			<div class="row">
+          				<div class="grid-4 offset-2">
+          					<button class="btn btn-blue btn-block">Submit</button>
+          				</div>
+          			</div>
+          		</form>
+            </div>
+            
+          </div>
+        </div><!-- ./Content -->
+        
+      </div>
+    </div><!-- ./Forms Page -->
+    
+    
+    <div class="page page-current" id="temporary_views">
+      <div class="page-inner">
+        
+        <nav class="navbar">
+          <div class="navbar-inner">
+            <div class="container">
+              <span class="logo">Temporary Views</span>
+              <ul class="nav">
+                <li class="nav-left"><a href="#"><span class="icon">&#61903</span>Back</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav><!-- ./Navbar -->
+        
+        <div class="content">
+          <div class="content-inner">
+            
+            <section>
+              <div class="container">
+                
+                <a href="#alert" class="btn btn-primary btn-block modalLink">Alert</a>
+                <a href="#action_sheet" class="btn btn-primary btn-block modalLink">Action Sheet</a>
+                <a href="#modal_view" class="btn btn-primary btn-block modalLink">Modal View</a>
+                
+              </div>
+            </section>
+            
+          </div>
+        </div><!-- ./Content -->
+        
+      </div>
+    </div><!-- ./Temporary Views Page -->
+    
+  </div><!-- ./App View -->
+  
+  <!-- Modal View -->
+  <div class="overlay"></div>
+  
+  <div class="modal alert" id="alert">
+    <div class="modal-inner">
+      
+      <div class="modal-header">
+        <span class="modal-title">Alert</span>
+      </div><!-- ./Modal Header -->
+      
+      <div class="modal-body">
+        <span class="alert-message">Short message write here.</span>
+      </div><!-- ./Modal Body -->
+      
+      <div class="modal-footer">
+        <div class="modal-btn-group">
+          <a href="#" class="btn-modal closeBtn">Cansel</a>
+          <a href="#" class="btn-modal closeBtn">Done</a>
+        </div>
+      </div><!-- ./Modal Footer -->
+    </div>
+  </div><!-- ./Alert -->
+  
+  <div class="modal action-sheet" id="action_sheet">
+    <div class="modal-inner">
+      <div class="action-btn-group">
+        <a href="#" class="btn-action">Action1</a>
+        <a href="#" class="btn-action">Action2</a>
+        <a href="#" class="btn-action">Action3</a>
+      </div>
+      <div class="cancel-btn">
+        <a href="#" class="btn-cancel closeBtn">Cancel</a>
+      </div>
+    </div>
+  </div><!-- ./Action Sheet -->
+  
+  <div class="modal modal-view" id="modal_view">
+    <div class="modal-inner">
+      
+      <div class="modal-header">
+        <div class="span modal-title">Modal View</div>
+      </div>
+      
+      <div class="modal-body">
+        Some contents show modal view.
+      </div>
+      
+      <div class="modal-footer">
+        <div class="modal-btn-group">
+          <a href="#" class="btn-modal closeBtn">Cansel</a>
+          <a href="#" class="btn-modal closeBtn">Done</a>
+        </div>
+      </div><!-- ./Modal Footer -->
+      
+    </div>
+  </div><!-- ./Modal View -->
+  
+  <!-- JS File Loading -->
+  <script type="text/javascript" src="javascripts/require.js" data-main="javascripts/main"></script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+@charset "UTF-8";
+.searchbar {
+	display: block;
+	position: relative;
+	
+	.searchbar-inner {
+		display: block;
+		position: relative;
+		background: scale-color($light-gray, $lightness: 50%);
+		
+		input[type="search"] {
+		  position: relative;
+			-webkit-appearance: none;
+			padding: 6px 0 4px 10px;
+			max-width: 40em;
+			margin: 10px auto 10px auto;
+			border: 1px solid $light-gray;
+			border-radius: 5px;
+      
+      &.with-icon {
+        padding: 6px 0 4px 25px;
+        &:before {
+          font-family: 'ios7-icon';
+          content: '\f15c';
+          display: inline-block;
+          position: absolute;
+          left: 10px;
+        }
+      }
+		}
+	}
+}

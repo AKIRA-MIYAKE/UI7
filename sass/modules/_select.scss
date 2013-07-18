@@ -1,0 +1,111 @@
+@charset "UTF-8";
+/* =============================================================
+    SELECT styling.
+ * ============================================================= */
+
+.dk_container {
+  position: relative;
+  background-color: $white;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  margin-bottom: 18px;
+  border-radius: 5px;
+  width: 100%;
+  
+  &:focus {
+    outline: 0;
+  }
+  
+  a {
+    color: $black;
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
+
+.dk_toggle {
+  background-image: url('select/forward.png');
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-position: 98% center;
+  width: 100%;
+  border: 1px solid scale-color($gray, $lightness: 50%);
+  color: $black;
+  padding: 6px 45px 4px 10px;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  
+  &:hover {
+    border-color: $primary;
+    color: $black;
+  }
+}
+
+.dk_focus {
+  .dk_toggle {
+    border-color: $primary;
+  }
+  .dk_toggle {
+    box-shadow: none;
+  }
+}
+
+.dk_open {
+  z-index: 10;
+  
+  .dk_toggle {
+    background-color: $white;
+    border-color: $primary;
+    color: $black;
+    box-shadow: none;
+  }
+}
+
+.dk_options {
+  border-radius: 5px;
+  margin-top: 10px;
+  box-shadow: 0 1px 1px scale-color($black, $alpha: -80%);
+  
+  ul, li {
+    margin: 0;
+  }
+  
+  li {
+    a {
+      border-bottom: 1px solid $light-gray;
+      padding: 11px 10px 9px 10px;
+    }
+    
+    &:first-child a {
+      border-radius: 5px 5px 0 0;
+    }
+    
+    &:last-child a {
+      border-bottom: none;
+      border-radius: 0 0 5px 5px;
+    }
+  }
+}
+ 
+.dk_options a:hover,
+.dk_option_current a {
+  background: $light-gray;
+  color: $black;
+  text-decoration: none;
+}
+
+.dk_options_inner {
+  background: $white;
+  border: none;
+  color: $black;;
+  max-height: 200px;
+  border-radius: 5px;
+}
+
+.dk_options_inner,
+.dk_touch .dk_options {
+  max-height: 200px;
+}

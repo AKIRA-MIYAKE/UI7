@@ -1,0 +1,50 @@
+@charset "UTF-8";
+/* =============================================================
+    BUTTON styling.
+ * ============================================================= */
+
+.btn {
+  padding: 6px 20px 4px;
+  font-size: $font-size;
+  font-weight: 300;
+  line-height: $line-height;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.btn-primary {
+  background: $primary;
+  color: $white;
+  border-color: $primary;
+  
+  &:hover, &:active, &.active {
+    background: $secondary;
+    border-color: $secondary;
+  }
+}
+
+.btn-danger {
+  background: $red;
+  color: $white;
+  border-color: $red;
+  
+  &:hover, &:active, &.active {
+    background: scale-color($red, $lightness: -50%);
+    border-color: scale-color($red, $lightness: -50%);
+  }
+}
+
+.btn-nonframe {
+  color: $primary;
+  
+  &:hover, &:active, &.active {
+    color: $secondary;
+  }
+}
+
+.btn-nonframe.btn-danger {
+  color: $red;
+  
+  &:hover, &:active, &.active {
+    color: scale-color($red, $lightness: -50%);
+  }
+}
