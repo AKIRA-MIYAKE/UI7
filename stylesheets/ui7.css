@@ -225,7 +225,7 @@ html, body {
   margin-top: 0;
   margin-bottom: -1px;
   border-radius: 0;
-  padding: 16px 10px 14px 10px;
+  padding: 11px 10px 9px 10px;
 }
 .login-form .textbox-group input:first-of-type {
   border-radius: 5px 5px 0 0;
@@ -540,6 +540,8 @@ html, body {
   box-sizing: border-box;
 }
 .list .list-inner ul li .item a {
+  display: block;
+  position: relative;
   color: #333333;
   text-decoration: none;
 }

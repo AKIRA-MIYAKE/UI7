@@ -48,17 +48,46 @@ require([
 		$('.navbar-inner').css('padding-top', '20px');
   };
   
-  //Dropkick
-  $('select').dropkick({
-    width: '100%'
-  });
+  $(function() {
+    //AppView
+    window.setTimeout(function() {
+      $.pageTransition({
+        in: $('#login'),
+        out: $('#start'),
+        inEffect: 'pt-page-moveFromBottomFade',
+        outEffect: 'pt-page-moveToTopFade'
+      });
+    }, 2000);
     
-  //Modal
-  $('.modalLink').modal({
-    opacity: 0.5,
-    resizeWindow: true,
-    animationSpeed: 200
-  });
+    $('.next-page').on('click', function(event) {
+      event.preventDefault();
+      var inPageUrl = $(this).attr('href');
+      $.pageTransition({
+        in: $(inPageUrl),
+        out: $('.page-current')
+      });
+    });
+    $('.prev-page').on('click', function(event) {
+      event.preventDefault();
+      var inPageUrl = $(this).attr('href');
+      $.pageTransition({
+        in: $(inPageUrl),
+        out: $('.page-current'),
+        inEffect: 'pt-page-moveFromLeft',
+        outEffect: 'pt-page-moveToRight'
+      })
+    });
+    
+    //Dropkick
+    $('select').dropkick({
+      width: '100%'
+    });
       
-  //pagetransition
+    //Modal
+    $('.modalLink').modal({
+      opacity: 0.5,
+      resizeWindow: true,
+      animationSpeed: 200
+    });
+  });
 });

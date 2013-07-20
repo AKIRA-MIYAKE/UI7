@@ -14,10 +14,13 @@
   <link rel="stylesheet" href="stylesheets/kraken.css" />
   <link rel="stylesheet" href="stylesheets/dropkick.css" />
   <link rel="stylesheet" href="stylesheets/animations.css" />
-  <link rel="stylesheet" href="sass/ui7.css" />
+  <link rel="stylesheet" href="stylesheets/ui7.css" />
   <style>
     .content {
       padding: 50px 0;
+    }
+    #login .content {
+      padding: 0;
     }
     .description p {
       margin-bottom: 5px;
@@ -47,7 +50,7 @@
 
   <div class="app-view"><!-- Wrapper of Pages -->
     
-    <div class="page" id="start">
+    <div class="page page-current" id="start">
       <div class="page-inner">
         
         <div class="app-name">
@@ -79,7 +82,7 @@
                   <label for="password">Password</label>
                   <input type="text" id="password" placeholder="Password" />
                 </div>
-                
+                <a href="#main" class="btn btn-primary btn-block next-page">Login</a>
               </div>
               
             </div>
@@ -122,11 +125,11 @@
               <div class="list">
                 <div class="list-inner">
                   <ul>
-                    <li><span class="item"><a href="#">Bars</a></span></li>
-                    <li><span class="item"><a href="#">Lists</a></span></li>
-                    <li><span class="item"><a href="#">Typography</a></span></li>
-                    <li><span class="item"><a href="#">Forms</a></span></li>
-                    <li><span class="item"><a href="#">Temporary Views</a></span></li>
+                    <li><span class="item"><a href="#bars" class="next-page">Bars</a></span></li>
+                    <li><span class="item"><a href="#lists" class="next-page">Lists</a></span></li>
+                    <li><span class="item"><a href="#typography" class="next-page">Typography</a></span></li>
+                    <li><span class="item"><a href="#forms" class="next-page">Forms</a></span></li>
+                    <li><span class="item"><a href="#temporary_views" class="next-page">Temporary Views</a></span></li>
                   </ul>
                 </div>
               </div>
@@ -148,7 +151,7 @@
             <div class="container">
               <span class="logo">Bars</span>
               <ul class="nav">
-                <li class="nav-left"><a href="#"><span class="icon">&#61903</span>Back</a></li>
+                <li class="nav-left"><a href="#main" class="prev-page"><span class="icon">&#61903</span>Back</a></li>
               </ul>
             </div>
           </div>
@@ -256,7 +259,7 @@
             <div class="container">
               <span class="logo">Lists</span>
               <ul class="nav">
-                <li class="nav-left"><a href="#"><span class="icon">&#61903</span>Back</a></li>
+                <li class="nav-left"><a href="#main" class="prev-page"><span class="icon">&#61903</span>Back</a></li>
               </ul>
             </div>
           </div>
@@ -315,7 +318,7 @@
             <div class="container">
               <span class="logo">Typography</span>
               <ul class="nav">
-                <li class="nav-left"><a href="#"><span class="icon">&#61903</span>Back</a></li>
+                <li class="nav-left"><a href="#main" class="prev-page"><span class="icon">&#61903</span>Back</a></li>
               </ul>
             </div>
           </div>
@@ -365,7 +368,7 @@
             <div class="container">
               <span class="logo">Forms</span>
               <ul class="nav">
-                <li class="nav-left"><a href="#"><span class="icon">&#61903</span>Back</a></li>
+                <li class="nav-left"><a href="#main" class="prev-page"><span class="icon">&#61903</span>Back</a></li>
               </ul>
             </div>
           </div>
@@ -409,7 +412,7 @@
     </div><!-- ./Forms Page -->
     
     
-    <div class="page page-current" id="temporary_views">
+    <div class="page" id="temporary_views">
       <div class="page-inner">
         
         <nav class="navbar">
@@ -417,7 +420,7 @@
             <div class="container">
               <span class="logo">Temporary Views</span>
               <ul class="nav">
-                <li class="nav-left"><a href="#"><span class="icon">&#61903</span>Back</a></li>
+                <li class="nav-left"><a href="#main" class="prev-page"><span class="icon">&#61903</span>Back</a></li>
               </ul>
             </div>
           </div>
